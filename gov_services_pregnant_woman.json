@@ -1,311 +1,354 @@
 {
-  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/628000000735?administOrgCd=ALL": {
-    "finished": true
-  },
-  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/135200000005?administOrgCd=ALL": {
-    "finished": true
-  },
-  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/135200000114?administOrgCd=ALL": {
-    "finished": true
-  },
-  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/567000000111?administOrgCd=ALL": {
-    "finished": true
-  },
-  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/611000000160?administOrgCd=ALL": {
-    "finished": true
-  },
-  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/404000000104?administOrgCd=ALL": {
-    "finished": true
-  },
-  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/414000000117?administOrgCd=ALL": {
-    "finished": true
-  },
-  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55265700002?administOrgCd=ALL": {
-    "finished": true
-  },
-  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/567000000104?administOrgCd=ALL": {
-    "finished": true
-  },
-  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/569000000344?administOrgCd=ALL": {
-    "finished": true
-  },
-  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/641000000671?administOrgCd=ALL": {
-    "finished": true
-  },
-  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/421000000642?administOrgCd=ALL": {
-    "finished": true
-  },
-  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/645000000112?administOrgCd=ALL": {
-    "finished": true
-  },
-  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/554000000106?administOrgCd=ALL": {
-    "finished": true
-  },
-  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/393000000150?administOrgCd=ALL": {
-    "finished": true
-  },
-  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/390000000106?administOrgCd=ALL": {
-    "finished": true
-  },
-  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/305000000109?administOrgCd=ALL": {
-    "finished": true
-  },
-  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/383000000147?administOrgCd=ALL": {
-    "finished": true
-  },
-  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/521000000107?administOrgCd=ALL": {
-    "finished": true
-  },
-  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/323000000106?administOrgCd=ALL": {
-    "finished": true
-  },
-  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/499000000102?administOrgCd=ALL": {
-    "finished": true
-  },
-  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/348000000375?administOrgCd=ALL": {
-    "finished": true
-  },
-  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/382000000137?administOrgCd=ALL": {
-    "finished": true
-  },
-  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/301000000123?administOrgCd=ALL": {
-    "finished": true
-  },
-  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/400000000108?administOrgCd=ALL": {
-    "finished": true
-  },
-  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/408000000529?administOrgCd=ALL": {
-    "finished": true
-  },
-  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/327000000105?administOrgCd=ALL": {
-    "finished": true
-  },
-  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/347000000113?administOrgCd=ALL": {
-    "finished": true
-  },
-  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/629000000127?administOrgCd=ALL": {
-    "finished": true
-  },
-  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/341000000111?administOrgCd=ALL": {
-    "finished": true
-  },
-  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/321000000126?administOrgCd=ALL": {
-    "finished": true
-  },
-  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/468000000136?administOrgCd=ALL": {
-    "finished": true
-  },
-  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/417000000111?administOrgCd=ALL": {
-    "finished": true
-  },
-  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/462000000307?administOrgCd=ALL": {
-    "finished": true
-  },
-  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/302000000109?administOrgCd=ALL": {
-    "finished": true
-  },
-  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/471000000122?administOrgCd=ALL": {
-    "finished": true
-  },
-  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/336000000204?administOrgCd=ALL": {
-    "finished": true
-  },
-  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/567000000125?administOrgCd=ALL": {
-    "finished": true
-  },
-  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/332000000102?administOrgCd=ALL": {
-    "finished": true
-  },
-  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/467000000104?administOrgCd=ALL": {
-    "finished": true
-  },
-  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/508000000668?administOrgCd=ALL": {
-    "finished": true
-  },
-  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/468000000101?administOrgCd=ALL": {
-    "finished": true
-  },
-  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/313000000102?administOrgCd=ALL": {
-    "finished": true
-  },
-  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/304000000127?administOrgCd=ALL": {
-    "finished": true
-  },
-  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/440000000106?administOrgCd=ALL": {
-    "finished": true
-  },
-  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/452000000169?administOrgCd=ALL": {
-    "finished": true
-  },
-  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/460000000149?administOrgCd=ALL": {
-    "finished": true
-  },
-  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/458000000116?administOrgCd=ALL": {
-    "finished": true
-  },
-  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/490000000105?administOrgCd=ALL": {
-    "finished": true
-  },
-  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/479000000109?administOrgCd=ALL": {
-    "finished": true
-  },
-  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/482000000109?administOrgCd=ALL": {
-    "finished": true
-  },
-  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/507000000760?administOrgCd=ALL": {
-    "finished": true
-  },
-  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/300000000101?administOrgCd=ALL": {
-    "finished": true
-  },
-  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/462000000299?administOrgCd=ALL": {
-    "finished": true
-  },
-  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/522000000105?administOrgCd=ALL": {
-    "finished": true
-  },
-  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/469000000114?administOrgCd=ALL": {
-    "finished": true
-  },
-  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/510000000123?administOrgCd=ALL": {
-    "finished": true
-  },
-  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/461000000109?administOrgCd=ALL": {
-    "finished": true
-  },
-  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/539000000110?administOrgCd=ALL": {
-    "finished": true
-  },
-  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/506000000112?administOrgCd=ALL": {
-    "finished": true
-  },
-  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/470000000129?administOrgCd=ALL": {
-    "finished": true
-  },
-  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/546000000130?administOrgCd=ALL": {
-    "finished": true
-  },
-  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/474000000133?administOrgCd=ALL": {
-    "finished": true
-  },
-  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/516000000122?administOrgCd=ALL": {
-    "finished": true
-  },
-  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/435000000129?administOrgCd=ALL": {
-    "finished": true
-  },
-  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/421000000627?administOrgCd=ALL": {
-    "finished": true
-  },
-  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/520000000112?administOrgCd=ALL": {
-    "finished": true
-  },
-  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/526000000106?administOrgCd=ALL": {
-    "finished": true
-  },
-  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/361000000114?administOrgCd=ALL": {
-    "finished": true
-  },
-  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/497000000106?administOrgCd=ALL": {
-    "finished": true
-  },
-  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/473000000116?administOrgCd=ALL": {
-    "finished": true
-  },
-  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/452000000173?administOrgCd=ALL": {
-    "finished": true
-  },
-  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/422000000121?administOrgCd=ALL": {
-    "finished": true
-  },
-  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/472000000109?administOrgCd=ALL": {
-    "finished": true
-  },
-  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/300000000140?administOrgCd=ALL": {
-    "finished": true
-  },
-  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00023400011?administOrgCd=ALL": {
-    "finished": true
-  },
-  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/643000000739?administOrgCd=ALL": {
-    "finished": true
-  },
-  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/508000000701?administOrgCd=ALL": {
-    "finished": true
-  },
-  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/SD0000016094?administOrgCd=ALL": {
-    "finished": true
-  },
-  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/570000000124?administOrgCd=ALL": {
-    "finished": true
-  },
-  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/319000000145?administOrgCd=ALL": {
-    "finished": true
-  },
-  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/311000000113?administOrgCd=ALL": {
-    "finished": true
-  },
-  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/449000000142?administOrgCd=ALL": {
-    "finished": true
-  },
-  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/631000000127?administOrgCd=ALL": {
-    "finished": true
-  },
-  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/383000000194?administOrgCd=ALL": {
-    "finished": true
-  },
-  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/514000000113?administOrgCd=ALL": {
-    "finished": true
-  },
-  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/453000000173?administOrgCd=ALL": {
-    "finished": true
-  },
-  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/511000000121?administOrgCd=ALL": {
-    "finished": true
-  },
-  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/537000000127?administOrgCd=ALL": {
-    "finished": true
-  },
-  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/538000000118?administOrgCd=ALL": {
-    "finished": true
-  },
-  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/525000000124?administOrgCd=ALL": {
-    "finished": true
-  },
-  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/484000000134?administOrgCd=ALL": {
-    "finished": true
-  },
-  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/476000000134?administOrgCd=ALL": {
-    "finished": true
-  },
-  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/344000000113?administOrgCd=ALL": {
-    "finished": true
-  },
-  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/442000000134?administOrgCd=ALL": {
-    "finished": true
-  },
-  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/449000000153?administOrgCd=ALL": {
-    "finished": true
-  },
-  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/311000000137?administOrgCd=ALL": {
-    "finished": true
-  },
-  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/650000000274?administOrgCd=ALL": {
-    "finished": true
-  },
-  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/320000000105?administOrgCd=ALL": {
-    "finished": true
-  },
-  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/425000000650?administOrgCd=ALL": {
-    "finished": true
-  },
-  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/451000000129?administOrgCd=ALL": {
-    "finished": true
-  },
-  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/525000000125?administOrgCd=ALL": {
-    "finished": true
-  },
-  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/524000000132?administOrgCd=ALL": {
-    "finished": true
-  }
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/628000000735?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/135200000005?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/135200000114?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/567000000111?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/611000000160?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/404000000104?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/414000000117?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55265700002?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/567000000104?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/569000000344?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/641000000671?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/421000000642?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/645000000112?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/554000000106?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/393000000150?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/390000000106?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/305000000109?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/383000000147?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/521000000107?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/323000000106?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/499000000102?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/348000000375?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/382000000137?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/301000000123?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/400000000108?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/408000000529?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/327000000105?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/347000000113?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/629000000127?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/341000000111?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/321000000126?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/468000000136?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/417000000111?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/462000000307?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/302000000109?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/471000000122?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/336000000204?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/567000000125?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/332000000102?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/467000000104?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/508000000668?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/468000000101?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/313000000102?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/304000000127?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/440000000106?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/452000000169?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/460000000149?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/458000000116?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/490000000105?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/479000000109?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/482000000109?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/507000000760?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/300000000101?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/462000000299?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/522000000105?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/469000000114?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/510000000123?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/461000000109?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/539000000110?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/506000000112?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/470000000129?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/546000000130?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/474000000133?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/516000000122?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/435000000129?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/421000000627?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/520000000112?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/526000000106?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/361000000114?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/497000000106?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/473000000116?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/452000000173?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/422000000121?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/472000000109?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/300000000140?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00023400011?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/643000000739?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/508000000701?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/SD0000016094?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/570000000124?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/319000000145?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/311000000113?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/449000000142?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/631000000127?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/383000000194?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/514000000113?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/453000000173?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/511000000121?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/537000000127?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/538000000118?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/525000000124?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/484000000134?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/476000000134?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/344000000113?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/442000000134?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/449000000153?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/311000000137?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/650000000274?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/320000000105?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/425000000650?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/451000000129?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/525000000125?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/524000000132?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55391200001?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/378000000150?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/467000000116?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/506000000123?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00010400001?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00020400013?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/495000000418?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/494000000227?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00007100013?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00007400004?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00009200005?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00094400002?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/505000000116?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/450000000123?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/505000000115?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00007600006?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00030000003?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00004900004?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00005100005?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/174100000015?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/SD0000007672?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/WII000001280?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/SD0000012326?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/628000000110?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/GMW000000010?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/383000000110?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/SD0000006936?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/627000000137?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/628000000140?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/359000000113?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/554000000121?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/323000000102?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/394000000127?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/402000000104?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/502000000208?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/329000000101?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/383000000157?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/487000000108?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/516000000140?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/403000000104?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/338000000103?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/502000000218?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/473000000132?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/648000001035?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/342000000106?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/309000000124?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/333000000375?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/454000000151?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/631000000104?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/479000000119?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/311000000140?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/345000000101?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/431000000122?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/451000000103?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/494000000116?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/343000000104?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/538000000123?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/490000000118?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/397000000142?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/540000000125?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/499000000144?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/509000000121?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/516000000114?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/459000000102?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/455000000106?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/516000000119?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00066700004?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00114400007?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/534000000131?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/474100000002?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00008800006?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00009400001?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/304000000160?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00026100010?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00019100002?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00021400001?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00006200003?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00011000004?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00004000007?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00035000001?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/489000000429?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/489000000428?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00358700002?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/505000000109?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/547000000115?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/521000000101?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/135200000115?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55353000001?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/WII000001460?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/174000000029?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00045000002?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/999000000026?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/627000000120?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/999000000005?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55284500010?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/418000000089?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/SCY000000170?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/383000000127?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/SME000000110?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/553000000582?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/PTR000050660?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/409000000104?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55371400001?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/451000000143?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/405000000689?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/312000000125?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/370000000123?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/502000000209?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00006400002?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/418000000243?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00025800001?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/554000000131?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/502000000101?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/119200000059?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/419000000120?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/383000000141?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00025800006?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/325000000104?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/403000000130?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/382000000139?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/629000000197?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/537000000192?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/629000000143?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00006400004?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/406000000122?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/383000000154?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/422000000107?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/536000000116?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/383000000144?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/518000000113?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/322000000112?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/383000000189?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/510000000108?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/611000000153?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/310000000122?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/568000000112?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/647000000154?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/397000000112?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/329000000107?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/307000000111?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00008800001?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/484000000118?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/308000000128?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/523000000127?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/420000000161?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00026900003?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/471000000107?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00023500003?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00027300001?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/533000000120?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/648000001070?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/302000000111?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/497000000102?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/315000000278?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/451000000131?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/506000000133?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/541000000101?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00027000002?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00002300003?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/538000000108?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/464000000128?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/453000000177?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/319000000116?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00027100009?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00026700002?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/427000000195?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/445000000122?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/524000000170?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/491000000118?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/427000000240?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/448000000118?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00026700006?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00025000008?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/629000000181?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/334000000123?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/304000000141?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/454000000162?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/508000000695?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/459000000131?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/311000000133?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/508000000666?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00089600001?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/343000000113?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/537000000126?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00035000004?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/557000000115?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00011800001?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/470000000122?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/457000000105?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/338000000116?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/453000000207?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/469000000111?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/518000000119?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/443000000119?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00000700005?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/499000000134?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/452000000166?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00092900001?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/537000000175?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/571000000139?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/515000000134?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/445000000113?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00066700005?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00025400005?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/512000000125?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/523000000166?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/439000000835?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/523000000179?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/518000000111?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/479000000121?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00025700001?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/499000000125?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/523000000173?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/508000000669?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/491000000102?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/355000000117?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/450000000153?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/494000000224?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/518000000128?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00022200004?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/311000000138?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/999000000039?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55145700016?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/391000000120?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/394000000113?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/554000000114?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/400000000115?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/570000000118?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/400000000118?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/417000000121?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/642000000713?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/472000000113?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/424000000167?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/448000000123?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00107100001?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/442000000109?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/489000000118?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/451000000104?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/543000000123?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/540000000103?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/471000000121?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/427000000219?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/474000000103?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/611000019600?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/542000000104?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/545000000117?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00021400002?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/513000000360?administOrgCd=ALL": true,
+  "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/350000000127?administOrgCd=ALL": true
 }
