@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>여성정책 모아보기</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+  <style>
+    /* 로딩 인디케이터 스타일 */
+    .loading-indicator {
+      /* display는 hidden 클래스로 제어 */
+      align-items: center;
+      justify-content: center;
+      margin: 1em auto;
+      padding: 0.75em 1.5em;
+      background-color: #e0f7fa;
+      color: #00796b;
+      font-size: 1rem;
+      font-weight: bold;
+      border-radius: 12px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      max-width: 300px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+<header><h1>💡 여성정책 모아보기</h1></header>
+
+<!-- 1) 시작 카드 -->
+<section class="start-cards">
+  <div class="card start-card" id="personalCard">
+    <h2>맞춤정보</h2><p>지역·나이·키워드에 맞는 정책을 찾아요</p>
+  </div>
+  <div class="card start-card" id="globalCard">
+    <h2>전체검색</h2><p>모든 정책을 한 눈에 찾아요</p>
+  </div>
+</section>
+
+<!-- 2) 맞춤 폼 -->
+<section id="personalForm" class="form hidden">
+  <h3>맞춤정보 설정</h3>
+
+  <label>거주지역</label>
+  <select id="regionSelect">
+    <option>전국</option><option>서울특별시</option><option>부산광역시</option>
+    <option>대구광역시</option><option>인천광역시</option><option>광주광역시</option>
+    <option>대전광역시</option><option>울산광역시</option><option>세종특별자치시</option>
+    <option>경기도</option><option>강원특별자치도</option><option>충청북도</option>
+    <option>충청남도</option><option>전라북도</option><option>전라남도</option>
+    <option>경상북도</option><option>경상남도</option><option>제주특별자치도</option>
+  </select>
+
+  <label>생년월일</label>
+  <input type="date" id="dob">
+
+  <label>키워드 선택 (다중)</label>
+  <div class="tags">
+    <button type="button" class="tag" data-cat="1인가구">1인가구</button>
+    <button type="button" class="tag" data-cat="한부모">한부모</button>
+    <button type="button" class="tag" data-cat="임신/출산/육아">임신/출산/육아</button>
+    <button type="button" class="tag" data-cat="초/중/고등학생">초/중/고등학생</button>
+    <button type="button" class="tag" data-cat="대학(원)생">대학(원)생</button>
+    <button type="button" class="tag" data-cat="근로자/직장인">근로자/직장인</button>
+    <button type="button" class="tag" data-cat="구직/취업">구직/취업</button>
+    <button type="button" class="tag" data-cat="창업/자영업">창업/자영업</button>
+    <button type="button" class="tag" data-cat="고령자">고령자</button>
+    <button type="button" class="tag" data-cat="신혼부부">신혼부부</button>
+    <button type="button" class="tag" data-cat="다문화">다문화</button>
+    <button type="button" class="tag" data-cat="다문화">농/어업인</button>
+    <button type="button" class="tag" data-cat="다문화">취약계층</button>
+  </div>
+
+  <button id="btnSearch" class="btn">완료</button>
+</section>
+
+<!-- 3) 전체 검색 -->
+<section id="globalSection" class="hidden">
+  <div class="search-bar">
+    <input id="kwText" type="text" placeholder="검색어 입력…">
+    <button id="btnSearchText" class="btn">🔍</button>
+    <button id="btnFilterToggle" class="btn">조건검색 ▼</button>
+  </div>
+
+  <div id="filterForm" class="form hidden">
+    <label>지원형태 선택</label>
+
+    <!-- 숨겨둔 다중 select (app.js가 읽음) -->
+    <select id="supportSelect" multiple style="display:none">
+      <option>직접금전지원</option><option>감면환인지원</option><option>이용권</option>
+      <option>교육지원</option><option>의료지원</option><option>주거지원</option>
+      <option>교통지원</option><option>생계지원</option><option>상담지원</option>
+      <option>물품지원</option><option>문화예술</option><option>서비스</option>
+      <option>대출지원</option><option>보험료지원</option><option>법률지원</option>
+    </select>
+
+    <!-- 키워드와 동일한 디자인: tag + filter-tag -->
+    <div class="tags filter-tags">
+      <button type="button" class="tag filter-tag" data-support="직접금전지원">직접금전지원</button>
+      <button type="button" class="tag filter-tag" data-support="감면환인지원">감면환인지원</button>
+      <button type="button" class="tag filter-tag" data-support="이용권">이용권</button>
+      <button type="button" class="tag filter-tag" data-support="교육지원">교육지원</button>
+      <button type="button" class="tag filter-tag" data-support="의료지원">의료지원</button>
+      <button type="button" class="tag filter-tag" data-support="주거지원">주거지원</button>
+      <button type="button" class="tag filter-tag" data-support="교통지원">교통지원</button>
+      <button type="button" class="tag filter-tag" data-support="생계지원">생계지원</button>
+      <button type="button" class="tag filter-tag" data-support="상담지원">상담지원</button>
+      <button type="button" class="tag filter-tag" data-support="물품지원">물품지원</button>
+      <button type="button" class="tag filter-tag" data-support="문화예술">문화예술</button>
+      <button type="button" class="tag filter-tag" data-support="서비스">서비스</button>
+      <button type="button" class="tag filter-tag" data-support="대출지원">대출지원</button>
+      <button type="button" class="tag filter-tag" data-support="보험료지원">보험료지원</button>
+      <button type="button" class="tag filter-tag" data-support="법률지원">법률지원</button>
+    </div>
+
+    <button id="btnFilterSearch" class="btn">조회</button>
+  </div>
+</section>
+
+<!-- 4) 맞춤 요약 & 추가 검색 -->
+<section id="customSummary" class="hidden summary-card">
+  <div><strong id="summaryName"></strong><p id="summaryLine"></p></div>
+  <button id="btnEditInfo" class="btn">정보수정</button>
+</section>
+
+<section id="customSearch" class="hidden search-bar">
+  <input id="kwTextCustom" type="text" placeholder="추가 검색…">
+  <button id="btnSearchTextCustom" class="btn">🔍</button>
+</section>
+
+<!-- 로딩 인디케이터 -->
+<div id="loading" class="loading-indicator hidden">
+  검색 중… 잠시만 기다려 주세요.
+</div>
+
+<!-- 5) 결과 -->
+<section id="results" class="results"></section>
+
+<!-- 기존 JS -->
+<script src="/static/js/app.js"></script>
+
+<!-- (새) 지원형태 ↔ 숨은 select 동기화  -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const sel = document.getElementById('supportSelect');
+
+  // app.js 가 먼저 .tag 토글을 처리 → 우리는 그 결과만 반영
+  document.querySelectorAll('.filter-tag').forEach(btn=>{
+    btn.addEventListener('click', () => {
+      const v  = btn.dataset.support.trim();
+      const on = btn.classList.contains('active');   // 이미 토글 완료
+      [...sel.options].forEach(o=>{
+        if(o.textContent.trim() === v) o.selected = on;
+      });
+    });
+  });
+});
+</script>
+</body>
+</html>

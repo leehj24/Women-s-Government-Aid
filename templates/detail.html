@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>정책 상세</title>
+  <link rel="stylesheet" href="/static/css/style.css"/>
+</head>
+<body>
+  <button onclick="history.back()" class="btn">◀ 뒤로</button>
+  <article class="detail-card">
+    {% for key, val in item.items() %}
+      <p><strong>{{ key }}</strong>: {{ val }}</p>
+    {% endfor %}
+
+    {% if table_html %}
+      <h3>기타 정보</h3>
+      <!-- pandas DataFrame.to_html 결과를 그대로 렌더링 -->
+      {{ table_html | safe }}
+    {% endif %}
+  </article>
+</body>
+</html>
