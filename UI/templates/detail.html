@@ -5,19 +5,211 @@
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
   <title>정책 상세</title>
   <link rel="stylesheet" href="/static/css/style.css"/>
+
+  <style>
+    .detail-actions{ display:flex; gap:8px; margin-bottom:12px; }
+    .detail-card{ background:var(--gray-100); border:1px solid var(--gray-300); border-radius:var(--radius); padding:calc(var(--gap)*1.2); }
+
+    /* 좌측 레이블 / 우측 값 2열 그리드 */
+    .kv-line{
+      display:grid;
+      grid-template-columns: 120px 1fr; /* 좌: 레이블, 우: 값 */
+      column-gap:12px;
+      align-items:start;
+      margin:8px 0;
+    }
+    .kv-line strong{ font-weight:700; }
+
+    /* 줄바꿈 보존 */
+    .multiline{ white-space:pre-line; overflow-wrap:anywhere; }
+
+    /* 모바일에서 레이블 폭만 줄이기 */
+    @media (max-width:600px){
+      .kv-line{ grid-template-columns: 88px 1fr; }
+    }
+
+    /* ===== 기타 표 보기 좋게 ===== */
+    .table-wrap{
+      overflow:auto;
+      max-height:60vh;
+      background:#fff;
+      border:1px solid var(--gray-300);
+      border-radius:var(--radius);
+    }
+    .table-wrap table{
+      width:100%;
+      border-collapse:collapse;
+      table-layout:fixed;
+      font-size:0.95rem;
+      line-height:1.6;
+    }
+    .table-wrap th, .table-wrap td{
+      padding:8px 10px;
+      vertical-align:top;
+      border-bottom:1px solid var(--gray-200);
+      word-break:keep-all;
+      overflow-wrap:anywhere;
+      white-space:pre-line;  /* 셀 내부 개행 반영 */
+      text-align:left;
+    }
+    .table-wrap thead th{
+      position:sticky; top:0; background:var(--gray-100); z-index:1; font-weight:700;
+    }
+    .table-wrap tbody tr:nth-child(even){ background:#fafafa; }
+
+    /* 첫 번째 열을 더 앞쪽으로 붙이기 */
+    .table-wrap table th:first-child,
+    .table-wrap table td:first-child{
+      padding-left:4px;   /* 필요시 0으로 더 당겨도 됨 */
+      width:9rem;         /* 8~10rem 사이로 조절 */
+      text-align:left;
+    }
+  </style>
 </head>
 <body>
-  <button onclick="history.back()" class="btn">◀ 뒤로</button>
+  <div class="detail-actions">
+    <button onclick="history.back()" class="btn">◀ 뒤로</button>
+    {% if has_toggle %}
+      <button id="btnToggle" class="btn">상세보기</button>
+    {% endif %}
+  </div>
+
   <article class="detail-card">
-    {% for key, val in item.items() %}
-      <p><strong>{{ key }}</strong>: {{ val }}</p>
+    <!-- ✅ 제목: 상세 최상단에 큼직하게 -->
+    <h2 class="detail-title">{{ title }}</h2>
+
+    <p class="kv-line" id="rowTarget"><strong>지원대상</strong><span id="targetText"  class="multiline"></span></p>
+    <p class="kv-line" id="rowContent"><strong>지원내용</strong><span id="contentText" class="multiline"></span></p>
+
+    {% for k, v in fields %}
+      <p class="kv-line general-row"><strong>{{ k }}</strong><span class="multiline auto-link">{{ v }}</span></p>
     {% endfor %}
 
     {% if table_html %}
-      <h3>기타 정보</h3>
-      <!-- pandas DataFrame.to_html 결과를 그대로 렌더링 -->
-      {{ table_html | safe }}
+      <div class="kv-line">
+        <strong>기타 정보</strong>
+        <div class="table-wrap">{{ table_html | safe }}</div>
+      </div>
     {% endif %}
   </article>
+
+
+  <!-- 서버 데이터 주입: JSON (에디터 경고 없음) -->
+  <script id="server-data" type="application/json">
+  {{ {
+    "TARGET_ORIG": target_orig,
+    "TARGET_SUM": target_sum,
+    "CONTENT_ORIG": content_orig,
+    "CONTENT_SUM": content_sum,
+    "TARGET_SAME": target_same,
+    "CONTENT_SAME": content_same
+  } | tojson }}
+  </script>
+
+  <script>
+  // ===== 서버 값 파싱 =====
+  const {
+    TARGET_ORIG, TARGET_SUM, CONTENT_ORIG, CONTENT_SUM, TARGET_SAME, CONTENT_SAME
+  } = JSON.parse(document.getElementById('server-data').textContent);
+
+  // ===== 유틸: escape + URL 링크화 + 줄바꿈 유지 =====
+  function escHtml(s){
+    return (s ?? '').toString()
+      .replace(/&/g,'&amp;').replace(/</g,'&lt;')
+      .replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
+  }
+  function linkifyAndBreak(raw){
+    // 실제 개행과 문자 '\n', '\r\n' 모두 처리
+    const s = (raw || '')
+      .replace(/\r\n?/g,'\n')
+      .replace(/\\r\\n?/g,'\n')
+      .replace(/\\n/g,'\n')
+      .trim();
+    if(!s) return '';
+    let html = escHtml(s);
+    html = html.replace(/(https?:\/\/[^\s<>"')]+|www\.[^\s<>"')]+)/g, (m) => {
+      const href = m.startsWith('http') ? m : 'http://' + m;
+      return `<a href="${escHtml(href)}" target="_blank" rel="noopener noreferrer">${escHtml(m)}</a>`;
+    });
+    return html.replace(/\n/g,'<br>');
+  }
+  function setRich(el, text){ el.innerHTML = linkifyAndBreak(text); }
+  function hideRowIfEmpty(rowEl, valueEl){
+    const has = (valueEl.innerText || '').trim().length > 0;
+    rowEl.style.display = has ? '' : 'none';
+  }
+
+  // ===== 기타 표 후처리(줄바꿈/링크만, 목록 변환 없음) =====
+  function prettifyExtraTable(){
+    const wrap = document.querySelector('.table-wrap');
+    if(!wrap) return;
+
+    wrap.querySelectorAll('td').forEach(td => {
+      let raw = (td.textContent || '')
+        .replace(/\r\n?/g, '\n')
+        .replace(/\\r\\n?/g, '\n')
+        .replace(/\\n/g, '\n')
+        .trim();
+
+      if(!raw){ td.innerHTML = ''; return; }
+
+      const esc = s => s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+      const linkify = s => s.replace(/(https?:\/\/[^\s<>"')]+|www\.[^\s<>"')]+)/g, m=>{
+        const h = m.startsWith('http') ? m : 'http://' + m;
+        return `<a href="${esc(h)}" target="_blank" rel="noopener noreferrer">${esc(m)}</a>`;
+      });
+
+      td.innerHTML = linkify(esc(raw)).replace(/\n/g, '<br>');
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const rowTarget = document.getElementById('rowTarget');
+    const rowContent = document.getElementById('rowContent');
+    const tgtEl = document.getElementById('targetText');
+    const cntEl = document.getElementById('contentText');
+    const btn = document.getElementById('btnToggle');
+
+    // 기본 모드: 요약 보기 (같으면 원문 사용)
+    let mode = 'summary';
+
+    function computeTexts(){
+      const t_summary = (TARGET_SAME || !TARGET_SUM) ? (TARGET_ORIG || '') : (TARGET_SUM || '');
+      const c_summary = (CONTENT_SAME || !CONTENT_SUM) ? (CONTENT_ORIG || '') : (CONTENT_SUM || '');
+      const t_detail  = (TARGET_ORIG || TARGET_SUM || '');
+      const c_detail  = (CONTENT_ORIG || CONTENT_SUM || '');
+      return mode === 'summary'
+        ? { t: t_summary, c: c_summary, btn:'상세보기' }
+        : { t: t_detail,  c: c_detail,  btn:'요약하기' };
+    }
+
+    function render(){
+      const { t, c, btn:label } = computeTexts();
+      setRich(tgtEl, t);
+      setRich(cntEl, c);
+      hideRowIfEmpty(rowTarget, tgtEl);
+      hideRowIfEmpty(rowContent, cntEl);
+      if (btn) btn.textContent = label;
+    }
+
+    if (btn){
+      btn.addEventListener('click', () => {
+        mode = (mode === 'summary') ? 'detail' : 'summary';
+        render();
+        prettifyExtraTable(); // 토글 후에도 표 처리
+      });
+    }
+
+    // 일반 필드도 URL 링크화 + 비면 숨김
+    document.querySelectorAll('.general-row').forEach(row => {
+      const span = row.querySelector('.auto-link');
+      setRich(span, span.textContent);
+      hideRowIfEmpty(row, span);
+    });
+
+    render();
+    prettifyExtraTable();  // 최초 로드 시 표 처리
+  });
+  </script>
 </body>
 </html>

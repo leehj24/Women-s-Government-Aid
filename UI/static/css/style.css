@@ -178,3 +178,40 @@ select[multiple]{
   body{padding:var(--gap);}  
   .btn{padding:7px 12px;}
 }
+
+.detail-card{
+  background:var(--gray-100);
+  border:1px solid var(--gray-300);
+  border-radius:var(--radius);
+  padding:calc(var(--gap)*1.2);
+}
+
+/* 줄바꿈 보존용 */
+.multiline{
+  white-space: pre-line;     /* \n을 실제 줄바꿈으로 렌더 */
+  overflow-wrap: anywhere;   /* 너무 긴 단어 줄바꿈 */
+}
+
+.table-wrap th, .table-wrap td{
+  white-space: pre-line;   /* \n을 실제 줄바꿈으로 */
+  overflow-wrap: anywhere;
+}
+
+/* 더 보기 버튼 래퍼 */
+.load-more-wrap{
+  margin-top: var(--gap);
+}
+
+/* 가로 풀폭 버튼 */
+.btn-full{
+  width: 100%;
+  display: block;
+}
+
+.more-wrap{
+  margin-top: 8px;
+}
+.btn-wide{
+  width: 100%;
+  display: block;
+}
