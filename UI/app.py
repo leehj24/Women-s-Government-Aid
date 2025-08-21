@@ -3,7 +3,7 @@ from __future__ import annotations
 from flask import Flask, request, jsonify, render_template
 import pandas as pd, re, pathlib
 from typing import List
-from policy_search import find_policies, get_base_df  # 검색/필터 엔진
+from search.policy_search import find_policies, get_base_df
 
 BASE_DIR = pathlib.Path(__file__).resolve().parent
 app = Flask(__name__)
