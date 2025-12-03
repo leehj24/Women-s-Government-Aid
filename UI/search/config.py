@@ -12,8 +12,10 @@ TEXT_COLS = ("검색본문_nat",)
 # 데이터 파일 환경변수 키
 DATA_ENV = "POLICY_XLSX"
 
-# 파일 탐색 후보(상대/상위 경로)
+# 파일 탐색 후보(상대/상위 경로) - CSV 우선, 기존 XLSX는 백업용
 DEFAULT_FILE_CANDIDATES = [
+    "policy_summary_langchain_streaming.csv",
+    "../policy_summary_langchain_streaming.csv",
     "여성맞춤정책_요약_2차_결과_병합.xlsx",
     "../여성맞춤정책_요약_2차_결과_병합.xlsx",
 ]

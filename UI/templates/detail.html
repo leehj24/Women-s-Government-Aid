@@ -78,6 +78,10 @@
     <!-- ✅ 제목: 상세 최상단에 큼직하게 -->
     <h2 class="detail-title">{{ title }}</h2>
 
+    {% if final_summary %}
+      <p class="kv-line general-row" id="rowFinalSummary"><strong>최종요약</strong><span class="multiline auto-link">{{ final_summary }}</span></p>
+    {% endif %}
+
     <p class="kv-line" id="rowTarget"><strong>지원대상</strong><span id="targetText"  class="multiline"></span></p>
     <p class="kv-line" id="rowContent"><strong>지원내용</strong><span id="contentText" class="multiline"></span></p>
 

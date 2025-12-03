@@ -71,11 +71,12 @@ def detail(idx: int):
 
     # 상세 본문에서 감출 컬럼
     hide = {
-        "대상유형", "제목", "지원형태_분류", "카테고리_분류", "기타", "orig_index",
+        "대상유형", "제목", "지원형태_분류", "카테고리_분류", "기타", "orig_index", "row_id",
         "age_eff_ranges","age_has_rule",
         "지원대상", "지원내용",
         "지원대상_원문", "지원대상_초벌요약",
         "지원내용_원문", "지원내용_초벌요약",
+        "최종요약_final",
     }
 
     # 일반 필드(표시용): hide 제외하고 NaN 제거
@@ -92,6 +93,9 @@ def detail(idx: int):
         s = str(x)
         s = re.sub(r"\r\n?", "\n", s)
         return s.strip()
+
+    # 최종 요약은 별도 라벨로 최상단에 노출
+    final_summary = _norm(row.get("최종요약_final"))
 
     # 제목은 카드 맨 위에 크게 보여주기 위해 별도 변수로 전달
     title = _norm(row.get("제목"))
@@ -134,6 +138,7 @@ def detail(idx: int):
     return render_template(
         "detail.html",
         title=title,                   # ← 제목을 템플릿에 별도로 전달 (상단에 크게 배치)
+        final_summary=final_summary,
         fields=fields,
         # 표시 텍스트
         target_display=tgt_display,
