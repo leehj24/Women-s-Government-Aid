@@ -1,16 +1,50 @@
 # policy_search.py
 # - 데이터 로드 & 엔진 초기화
 # - find_policies / CLI만 제공(나머지는 모듈에 위임)
+# - Scala 검색 엔진 우선 사용 (사용 불가시 Python 엔진으로 폴백)
 
 import argparse
 import pandas as pd
 from typing import List, Optional, Literal
+import logging
+from datetime import datetime
 from .loader import load_dataframe
 from .engine import SearchEngine
+
+log = logging.getLogger(__name__)
 
 # 전역 싱글턴(간단하게)
 _df_raw, _df, _path = load_dataframe()
 _engine = SearchEngine(_df)
+
+# Scala 검색 엔진 래퍼 (지연 로딩)
+_scala_wrapper = None
+
+def _get_scala_wrapper():
+    """Scala 검색 엔진 래퍼 가져오기 (지연 초기화)"""
+    global _scala_wrapper
+    if _scala_wrapper is None:
+        try:
+            from .scala_search_wrapper import get_scala_wrapper
+            _scala_wrapper = get_scala_wrapper()
+        except Exception as e:
+            log.warning(f"Scala search engine not available: {e}")
+            _scala_wrapper = None
+    return _scala_wrapper
+
+def _calculate_age_from_dob(dob: str) -> Optional[int]:
+    """생년월일(YYYY-MM-DD)에서 만나이 계산"""
+    if not dob:
+        return None
+    try:
+        birth_date = datetime.strptime(dob, "%Y-%m-%d")
+        today = datetime.now()
+        age = today.year - birth_date.year
+        if (today.month, today.day) < (birth_date.month, birth_date.day):
+            age -= 1
+        return age
+    except Exception:
+        return None
 
 def _format_output(df_out: pd.DataFrame, out: Literal["dataframe","json","csv"]):
     if out == "dataframe":
@@ -34,13 +68,64 @@ def find_policies(input: str = "",
                   dob: Optional[str] = None,
                   categories: Optional[List[str]] = None,
                   supports: Optional[List[str]] = None,
-                  out: Literal["dataframe","json","csv"]="dataframe"):
+                  out: Literal["dataframe","json","csv"]="dataframe",
+                  use_scala: bool = True):
     """
     - input이 비어 있으면: 추천(필터만) — 신청 마감 임박 우선 정렬
-    - input이 있으면: FAISS 검색 + 필터 교집합(점수는 반환 컬럼에 'score')
+    - input이 있으면: 검색 (Scala 엔진 우선, 없으면 Python FAISS 엔진)
     - region="" 또는 "전국"이면 지역 제한 없음
     - dob="YYYY-MM-DD" 형식이면 만나이 계산하여 age_eff_ranges(JSON)과 교집합
+    - use_scala: True면 Scala 엔진 우선 사용 (기본값: True)
     """
+    # 나이 계산
+    age = _calculate_age_from_dob(dob) if dob else None
+    
+    # Scala 엔진 사용 시도
+    if use_scala:
+        scala_wrapper = _get_scala_wrapper()
+        if scala_wrapper and scala_wrapper.available:
+            try:
+                # 지역 정규화
+                region_normalized = region if region and region != "전국" else None
+                
+                if not input or not str(input).strip():
+                    # 추천 모드
+                    df_scala = scala_wrapper.recommend(
+                        region=region_normalized,
+                        age=age,
+                        categories=categories,
+                        supports=supports,
+                        top_k=topk or 200
+                    )
+                else:
+                    # 검색 모드
+                    df_scala = scala_wrapper.search(
+                        query=input,
+                        region=region_normalized,
+                        age=age,
+                        categories=categories,
+                        supports=supports,
+                        top_k=topk or 200
+                    )
+                
+                # Scala 결과를 원본 DataFrame과 병합하여 전체 컬럼 포함
+                if not df_scala.empty and "index" in df_scala.columns:
+                    # orig_index 컬럼 추가
+                    df_scala = df_scala.rename(columns={"index": "orig_index"})
+                    
+                    # 원본 데이터와 병합
+                    df_result = _df_raw.iloc[df_scala["orig_index"].tolist()].copy()
+                    df_result.insert(0, "score", df_scala["score"].values)
+                    df_result.insert(0, "orig_index", df_scala["orig_index"].values)
+                    
+                    log.info(f"Scala engine returned {len(df_result)} results")
+                    return _format_output(df_result, out)
+                    
+            except Exception as e:
+                log.warning(f"Scala engine failed, falling back to Python engine: {e}")
+                # 폴백: Python 엔진 사용
+    
+    # Python 엔진 사용 (폴백 또는 use_scala=False)
     if not input or not str(input).strip():
         df = _engine.recommend(region=region, dob=dob, categories=categories, supports=supports)
         return _format_output(df, out)

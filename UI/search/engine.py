@@ -11,6 +11,7 @@ from .index_faiss import FaissIndex
 from .age_filter import parse_query_age, dob_to_range, age_match
 from .region_filter import extract_top_sub, region_pass
 from .label_filter import contains_any
+from .query_enhancer import enhance_search_scores, split_query_into_keywords
 
 log = logging.getLogger(__name__)
 
@@ -104,24 +105,39 @@ class SearchEngine:
         D, I = self.index.query(query, topk=None)
         order, scores = I, D
 
-        # 쿼리 신호(나이/지역)를 필터에 전달
-        mask = self._stage1_mask(self.df, categories or [], supports or [], region, dob, kw_text=query)
+        # 쿼리에서 지역명 추출 (쿼리에 포함된 경우)
+        keywords, query_region = split_query_into_keywords(query)
+        # 쿼리에 지역명이 있으면 우선 사용
+        effective_region = query_region if query_region else region
 
-        rows_yes, rows_no = [], []
+        # 쿼리 신호(나이/지역)를 필터에 전달
+        mask = self._stage1_mask(self.df, categories or [], supports or [], effective_region, dob, kw_text=query)
+
+        rows_yes = []
         for rank, idx in enumerate(order):
             sc = float(scores[rank])
             if sc < threshold: 
                 continue
             if not mask[idx]:
                 continue
-            # REGION_MODE에 따라 버킷 구성 — 여기선 단순히 yes만 사용해도 되지만, boost 모드 대비
             rows_yes.append((sc, idx))
 
         if not rows_yes:
             return self.df.head(0).copy()
 
-        rows = sorted(rows_yes, key=lambda x: -x[0])[:TOPK_CANDIDATES]
-        sel_scores, sel_idx = zip(*rows)
-        out = self.df.iloc[list(sel_idx)].copy()
-        out.insert(0, "score", np.array(sel_scores))
+        # 점수 보정: 키워드 매칭 및 지역명 보너스/감점 적용
+        faiss_scores = np.array([s for s, _ in rows_yes])
+        faiss_indices = np.array([i for _, i in rows_yes])
+        
+        enhanced_scores, enhanced_indices = enhance_search_scores(
+            self.df, query, faiss_scores, faiss_indices
+        )
+
+        # 상위 K개 선택
+        top_k = min(TOPK_CANDIDATES, len(enhanced_indices))
+        sel_indices = enhanced_indices[:top_k]
+        sel_scores = enhanced_scores[:top_k]
+        
+        out = self.df.iloc[list(sel_indices)].copy()
+        out.insert(0, "score", sel_scores)
         return out.reset_index(drop=True)
