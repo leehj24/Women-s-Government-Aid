@@ -23,7 +23,24 @@ def _as_list(v) -> List[str]:
 
 @app.route("/")
 def home():
-    return render_template("index.html")
+    return render_template("index.html", start_mode="home")
+
+
+@app.route("/home")
+def home_alias():
+    return render_template("index.html", start_mode="home")
+
+
+@app.route("/custom")
+def custom_page():
+    # 맞춤정보 폼을 바로 열어주는 뷰
+    return render_template("index.html", start_mode="personal")
+
+
+@app.route("/all")
+def all_page():
+    # 전체검색 뷰를 바로 열어주는 뷰
+    return render_template("index.html", start_mode="global")
 
 
 @app.route("/search", methods=["POST"])

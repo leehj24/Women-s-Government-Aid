@@ -18,6 +18,7 @@ const btnSearchTextCustom = document.getElementById("btnSearchTextCustom");
 const results             = document.getElementById("results");
 const loading             = document.getElementById("loading");
 const tags                = document.querySelectorAll(".tag");
+const startCards          = document.querySelector(".start-cards");
 
 // ===== Client-side paging (for '더 보기') =====
 const PAGE_SIZE = 24;        // 한 번에 보여줄 카드 수
@@ -80,14 +81,33 @@ function calculateAge(dob) {
   .forEach(el => el.classList.add("hidden"));
 loadMoreBtn.style.display = "none";
 
-// ===== 시작 카드 이벤트 =====
-personalCard.onclick = () => {
-  document.querySelector(".start-cards").classList.add("hidden");
+function showHomeView() {
+  if (startCards) startCards.classList.remove("hidden");
+  personalForm.classList.add("hidden");
+  globalSection.classList.add("hidden");
+  filterForm.classList.add("hidden");
+  customSummary.classList.add("hidden");
+  customSearch.classList.add("hidden");
+  results.classList.add("hidden");
+  results.innerHTML = "";
+  loadMoreBtn.style.display = "none";
+  currentParams = {};
+}
+
+const openPersonal = () => {
+  if (startCards) startCards.classList.add("hidden");
   personalForm.classList.remove("hidden");
+  globalSection.classList.add("hidden");
+  filterForm.classList.add("hidden");
+  customSummary.classList.add("hidden");
+  customSearch.classList.add("hidden");
+  results.classList.add("hidden");
+  loadMoreBtn.style.display = "none";
+  currentParams = {};
 };
 
-globalCard.onclick = () => {
-  document.querySelector(".start-cards").classList.add("hidden");
+const openGlobal = () => {
+  if (startCards) startCards.classList.add("hidden");
   globalSection.classList.remove("hidden");
   filterForm.classList.add("hidden");
   customSummary.classList.add("hidden");
@@ -95,6 +115,22 @@ globalCard.onclick = () => {
   currentParams = {};
   fetchResults({});
 };
+
+// ===== 시작 카드 이벤트 =====
+if (personalCard) personalCard.onclick = openPersonal;
+if (globalCard) globalCard.onclick = openGlobal;
+
+// ===== 초기 라우트 모드 적용 =====
+(() => {
+  const mode = document.body.dataset.startMode || "home";
+  if (mode === "personal") {
+    openPersonal();
+  } else if (mode === "global") {
+    openGlobal();
+  } else {
+    showHomeView();
+  }
+})();
 
 // ===== 조건검색 토글 =====
 btnFilterToggle.onclick = () => filterForm.classList.toggle("hidden");

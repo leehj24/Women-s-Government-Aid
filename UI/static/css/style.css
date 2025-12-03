@@ -27,6 +27,41 @@ body{
 header{
   margin-bottom:var(--gap);
 }
+.topbar{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  margin-bottom:calc(var(--gap)*1.2);
+}
+.brand{
+  font-size:1.35rem;
+  font-weight:700;
+  text-decoration:none;
+  color:#111;
+}
+.brand:hover{ color:var(--primary-dark); }
+.top-actions{
+  display:flex;
+  gap:8px;
+}
+.nav-btn{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  padding:7px 12px;
+  border:1px solid var(--gray-300);
+  border-radius:var(--radius);
+  background:#fff;
+  color:#111;
+  text-decoration:none;
+  font-size:.92rem;
+  transition:.15s;
+}
+.nav-btn:hover{
+  border-color:var(--primary);
+  color:var(--primary-dark);
+}
 h1{
   font-size:1.6rem;
   margin-bottom:var(--gap);

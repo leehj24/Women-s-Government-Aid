@@ -24,8 +24,14 @@
     }
   </style>
 </head>
-<body>
-<header><h1>💡 여성정책 모아보기</h1></header>
+<body data-start-mode="{{ start_mode or 'home' }}">
+<header class="topbar">
+  <a class="brand" href="/home">💡 여성정책 모아보기</a>
+  <nav class="top-actions">
+    <a class="nav-btn" href="/custom">맞춤정보 하기</a>
+    <a class="nav-btn" href="/all">전체검색 해보기</a>
+  </nav>
+</header>
 
 <!-- 1) 시작 카드 -->
 <section class="start-cards">
