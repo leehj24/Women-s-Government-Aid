@@ -3,6 +3,9 @@ from __future__ import annotations
 from flask import Flask, request, jsonify, render_template
 import pandas as pd, re, pathlib
 from typing import List
+import subprocess
+import sys
+import os
 from search.policy_search import find_policies, get_base_df
 
 BASE_DIR = pathlib.Path(__file__).resolve().parent
@@ -10,6 +13,76 @@ app = Flask(__name__)
 
 # detail 렌더링용 원본 DF (policy_search와 동일 원본)
 _df_base = get_base_df()
+
+
+def _ensure_scala_built():
+    """Scala JAR 파일이 없으면 자동으로 빌드"""
+    scala_dir = BASE_DIR / "scala-search"
+    jar_paths = [
+        scala_dir / "target" / "scala-2.13" / "policy-search-engine.jar",
+        scala_dir / "target" / "policy-search-engine.jar",
+    ]
+    
+    # JAR 파일이 이미 있으면 스킵
+    for jar_path in jar_paths:
+        if jar_path.exists():
+            print(f"✓ Scala JAR found: {jar_path}")
+            return True
+    
+    # JAR 파일이 없으면 빌드 시도
+    print("Scala JAR not found. Attempting to build...")
+    
+    if not scala_dir.exists():
+        print(f"⚠ Scala directory not found: {scala_dir}")
+        return False
+    
+    # sbt 명령어 실행
+    is_windows = sys.platform == "win32"
+    
+    try:
+        if is_windows:
+            # Windows: sbt assembly 직접 실행
+            cmd = ["sbt", "assembly"]
+        else:
+            # Linux/Mac: sbt assembly 직접 실행
+            cmd = ["sbt", "assembly"]
+        
+        print(f"Running: {' '.join(cmd)}")
+        result = subprocess.run(
+            cmd,
+            cwd=str(scala_dir),
+            capture_output=True,
+            text=True,
+            timeout=300  # 5분 타임아웃
+        )
+        
+        if result.returncode == 0:
+            # 빌드 성공 확인
+            for jar_path in jar_paths:
+                if jar_path.exists():
+                    print(f"✓ Scala build successful: {jar_path}")
+                    return True
+            print("⚠ Build completed but JAR file not found in expected location")
+            return False
+        else:
+            print(f"⚠ Scala build failed (sbt may not be installed):")
+            print(f"  stdout: {result.stdout[-500:] if result.stdout else '(empty)'}")
+            print(f"  stderr: {result.stderr[-500:] if result.stderr else '(empty)'}")
+            print("  Continuing with Python engine only...")
+            return False
+            
+    except subprocess.TimeoutExpired:
+        print("⚠ Scala build timeout (took too long)")
+        return False
+    except FileNotFoundError:
+        print("⚠ sbt command not found. Please install sbt to use Scala engine.")
+        print("  Download: https://www.scala-sbt.org/download.html")
+        print("  Continuing with Python engine only...")
+        return False
+    except Exception as e:
+        print(f"⚠ Error building Scala: {e}")
+        print("  Continuing with Python engine only...")
+        return False
 
 
 def _as_list(v) -> List[str]:
@@ -171,4 +244,6 @@ def detail(idx: int):
 
 
 if __name__ == "__main__":
+    # 앱 시작 시 Scala 빌드 확인
+    _ensure_scala_built()
     app.run(debug=True)

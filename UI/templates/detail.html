@@ -68,7 +68,7 @@
 </head>
 <body>
   <div class="detail-actions">
-    <button onclick="history.back()" class="btn">◀ 뒤로</button>
+    <button id="btnBack" class="btn">◀ 뒤로</button>
     {% if has_toggle %}
       <button id="btnToggle" class="btn">상세보기</button>
     {% endif %}
@@ -168,6 +168,23 @@
   }
 
   document.addEventListener('DOMContentLoaded', () => {
+    // 뒤로 가기 버튼 처리
+    const btnBack = document.getElementById('btnBack');
+    if (btnBack) {
+      btnBack.addEventListener('click', () => {
+        // URL에서 back 파라미터 확인
+        const urlParams = new URLSearchParams(window.location.search);
+        const backUrl = urlParams.get('back');
+        if (backUrl) {
+          // 검색 결과 페이지로 돌아가기
+          window.location.href = decodeURIComponent(backUrl);
+        } else {
+          // back 파라미터가 없으면 일반 뒤로 가기
+          history.back();
+        }
+      });
+    }
+    
     const rowTarget = document.getElementById('rowTarget');
     const rowContent = document.getElementById('rowContent');
     const tgtEl = document.getElementById('targetText');

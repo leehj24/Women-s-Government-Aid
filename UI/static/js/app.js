@@ -92,6 +92,7 @@ function showHomeView() {
   results.innerHTML = "";
   loadMoreBtn.style.display = "none";
   currentParams = {};
+  updateURL({}); // URL 초기화
 }
 
 const openPersonal = () => {
@@ -104,6 +105,7 @@ const openPersonal = () => {
   results.classList.add("hidden");
   loadMoreBtn.style.display = "none";
   currentParams = {};
+  updateURL({}); // URL 초기화
 };
 
 const openGlobal = () => {
@@ -113,6 +115,8 @@ const openGlobal = () => {
   customSummary.classList.add("hidden");
   customSearch.classList.add("hidden");
   currentParams = {};
+  // /all 경로에서 호출된 경우 경로 유지, 아니면 URL 업데이트 안 함
+  // (fetchResults에서 자동으로 URL 업데이트됨)
   fetchResults({});
 };
 
@@ -122,6 +126,12 @@ if (globalCard) globalCard.onclick = openGlobal;
 
 // ===== 초기 라우트 모드 적용 =====
 (() => {
+  // URL 파라미터가 있으면 복원 시도
+  if (restoreFromURL()) {
+    return; // 복원 성공하면 여기서 종료
+  }
+  
+  // URL 파라미터가 없으면 start_mode에 따라 초기화
   const mode = document.body.dataset.startMode || "home";
   if (mode === "personal") {
     openPersonal();
@@ -230,11 +240,16 @@ function renderResults(data, { append = false } = {}) {
   }
 
   const toShow = data.slice(0, shownCount);
+  // 현재 검색 파라미터를 URL에 포함하여 detail 페이지로 이동
+  // 현재 페이지의 전체 URL을 backUrl로 사용 (검색 상태 유지)
+  const currentUrl = new URL(window.location);
+  const backUrl = currentUrl.pathname + (currentUrl.search || '');
+  
   const html = toShow.map(item => {
     const fullCats = item["카테고리_분류"] || "";
     const catsText = formatCategories(fullCats);
     return `
-      <div class="card result-card" onclick="location.href='/detail/${item.index}'">
+      <div class="card result-card" onclick="location.href='/detail/${item.index}?back=${encodeURIComponent(backUrl)}'">
         <h3>${item.제목}</h3>
         <p class="cats" title="${escAttr(fullCats)}">${catsText}</p>
         <p>${item.지역}</p>
@@ -255,6 +270,110 @@ function renderResults(data, { append = false } = {}) {
   results.classList.remove("hidden");
 }
 
+// ===== URL 파라미터 관리 =====
+function updateURL(params) {
+  const url = new URL(window.location);
+  // 검색 파라미터가 있으면 URL에 추가, 없으면 제거
+  if (params && Object.keys(params).length > 0) {
+    Object.keys(params).forEach(key => {
+      const value = params[key];
+      if (value && value.toString().trim()) {
+        url.searchParams.set(key, value);
+      } else {
+        url.searchParams.delete(key);
+      }
+    });
+  } else {
+    // 파라미터가 없으면 쿼리 스트링 제거
+    url.search = '';
+  }
+  // 히스토리에 추가하지 않고 현재 URL만 업데이트 (뒤로가기 가능하도록)
+  window.history.pushState({}, '', url);
+}
+
+function getURLParams() {
+  const url = new URL(window.location);
+  const params = {};
+  if (url.searchParams.get('region')) params.region = url.searchParams.get('region');
+  if (url.searchParams.get('dob')) params.dob = url.searchParams.get('dob');
+  if (url.searchParams.get('category')) params.category = url.searchParams.get('category');
+  if (url.searchParams.get('kw_text')) params.kw_text = url.searchParams.get('kw_text');
+  return params;
+}
+
+function restoreFromURL() {
+  const params = getURLParams();
+  const currentPath = window.location.pathname;
+  
+  // /all 경로이거나 kw_text만 있으면 전체검색 모드
+  const isGlobalMode = currentPath === '/all' || (!params.region && !params.dob && !params.category && params.kw_text);
+  
+  if (Object.keys(params).length === 0) return false;
+
+  // 맞춤정보 모드인지 전체검색 모드인지 판단
+  const hasPersonalParams = params.region || params.dob || params.category;
+  
+  if (hasPersonalParams && !isGlobalMode) {
+    // 맞춤정보 모드 복원
+    if (startCards) startCards.classList.add("hidden");
+    personalForm.classList.add("hidden");
+    globalSection.classList.add("hidden");
+    customSummary.classList.remove("hidden");
+    customSearch.classList.remove("hidden");
+    
+    // 요약 정보 복원
+    const region = params.region || "전국";
+    const cats = params.category ? params.category.split(",") : [];
+    const dob = params.dob || "";
+    const age = calculateAge(dob);
+    
+    document.getElementById("summaryName").textContent = "내 맞춤 정보";
+    let summaryLine = `${region} | ${cats.join(", ")}`;
+    if (age !== null) summaryLine += ` | ${age}세`;
+    document.getElementById("summaryLine").textContent = summaryLine;
+    
+    // 폼 값 복원
+    if (params.region) document.getElementById("regionSelect").value = params.region;
+    if (params.dob) document.getElementById("dob").value = params.dob;
+    if (params.category) {
+      const catArray = params.category.split(",");
+      tags.forEach(t => {
+        if (catArray.includes(t.dataset.cat)) {
+          t.classList.add("active");
+        } else {
+          t.classList.remove("active");
+        }
+      });
+    }
+    
+    // 검색어 복원
+    if (params.kw_text) {
+      document.getElementById("kwTextCustom").value = params.kw_text;
+    }
+    
+    currentParams = { ...params };
+    // URL 복원 시에는 fetchResults에서 URL을 다시 업데이트하지 않도록 플래그 필요
+    // 하지만 일단은 그대로 두고, fetchResults에서 중복 업데이트가 발생해도 문제없음
+    fetchResults(currentParams);
+    return true;
+  } else if (params.kw_text || isGlobalMode) {
+    // 전체검색 모드 복원 (/all 경로이거나 kw_text만 있는 경우)
+    if (startCards) startCards.classList.add("hidden");
+    globalSection.classList.remove("hidden");
+    personalForm.classList.add("hidden");
+    customSummary.classList.add("hidden");
+    customSearch.classList.add("hidden");
+    if (params.kw_text) {
+      document.getElementById("kwText").value = params.kw_text;
+    }
+    currentParams = { ...params };
+    fetchResults(currentParams);
+    return true;
+  }
+  
+  return false;
+}
+
 // ===== 서버 조회 =====
 async function fetchResults(params) {
   loading.classList.remove("hidden");
@@ -262,11 +381,17 @@ async function fetchResults(params) {
   results.innerHTML = "";
   loadMoreBtn.style.display = "none";
 
+  // currentParams 업데이트
+  currentParams = { ...currentParams, ...params };
+  
+  // URL 업데이트 (검색 결과 표시 시)
+  updateURL(currentParams);
+
   try {
     const resp = await fetch("/search", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(params)
+      body: JSON.stringify(currentParams)
     });
     if (!resp.ok) throw new Error(`서버 에러: ${resp.status}`);
     const data = await resp.json();
