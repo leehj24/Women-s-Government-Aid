@@ -1,10 +1,15 @@
 Flask
 pandas
-scikit-learn
+numpy
 openpyxl
+python-dateutil
+faiss-cpu
+torch
+sentence-transformers
+scikit-learn
+scipy
+rank-bm25
+matplotlib
 JPype1
 konlpy
-# cd policy_app
-# python -m venv venv       # 가상환경 생성
-# source venv/bin/activate  # macOS/Linux
-# venv\Scripts\activate    # Windows
+jupyter
