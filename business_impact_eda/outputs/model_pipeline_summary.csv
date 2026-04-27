@@ -1,0 +1,22 @@
+﻿,value
+stage_1_notebook,match/Clean_text.ipynb
+stage_1_role,"정책 원문 정제, 반복 문구 축소, KoBART 초벌요약 생성"
+stage_1_model,EbanLee/kobart-summary-v3
+stage_1_outputs,"지원대상_초벌요약, 지원내용_초벌요약, 여성맞춤정책_요약_2차_결과.xlsx 계열"
+stage_2_notebook,match/Summarize_Excel_with_Gemma_2_and_Drafts_(Colab_Auto_Find).ipynb
+stage_2_role,"LangChain/LangGraph 기반 2차 배치 요약, CSV 스트리밍 저장, 재시작 가능 구조"
+stage_2_primary_summary_model,google/gemma-2-9b-it
+stage_2_fallback_summary_model,Qwen/Qwen2.5-7B-Instruct
+stage_2_quantization_policy,"GPU + bitsandbytes 가능 시 4-bit NF4 + bfloat16, 불가 시 bf16/float32"
+batch_size,4
+max_new_tokens,300
+do_sample,False
+temperature_when_sampling,0.3
+top_p_when_sampling,0.9
+optional_classifier,label 컬럼이 있을 때만 klue/roberta-base 학습 및 accuracy/f1/ROC-AUC/NDCG 계산
+지원대상 요약 존재 비율,0.9786259541984733
+지원내용 요약 존재 비율,0.9786259541984733
+원문 평균 길이,346.30763358778626
+요약 평균 길이,96.86030534351146
+평균 압축률,0.5137073904657576
+label 컬럼 존재 여부,False
